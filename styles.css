@@ -1,0 +1,102 @@
+h1{
+  margin: 30px;
+  text-align: center;
+}
+
+
+
+.file-upload-container {
+    
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#settings{
+  border-radius: 100px;
+  background-color: #c5b8cf;
+  display: flex;
+  justify-content: center;
+  /* margin-left: 20%; */
+  border: 2px solid #67626c;
+  margin: 10px;
+  /* padding: 20px; */
+  /* padding-left: 15%; */
+}
+
+#settings div{
+margin: 20px;
+
+  display: flex;
+  justify-content: center;
+}
+
+#settings button{
+height: 40px;
+width: 100px;
+margin: 16px;
+}
+
+#csvTable {
+    margin: 0 auto;
+}
+
+
+body{
+    background-color: #f0eceb;
+}
+  .file-drop {
+    border-radius: 100px;
+    margin: 10px;
+    border: 2px solid #67626c; 
+    padding: 15px;
+    text-align: center;
+    background-color: #c5b8cf; 
+    animation: pulse 2s infinite;
+    /* box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1); */
+    z-index: 9999;
+  }
+  
+  
+  /* .file-drop label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  } */
+  
+  .file-drop label {
+    display: inline;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+
+.flex-container{
+  display: flex;
+  width: 34%;
+}
+
+.chartTitle{
+  font-size: 1.5rem;
+}
+  
+input, select{
+  border-radius: 10px;
+  border-width: 2px;
+  height: 30px;  
+}
+
+button{
+  border-radius: 30px;
+}
+
+#showOnly {
+  width: 80px;
+}
+
+#export{
+margin: 40px;
+}
+/* canvas{
+  margin: 20px;
+} */

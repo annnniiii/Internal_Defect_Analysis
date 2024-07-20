@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Internal Defect Analyser</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- file drop 1 -->
+    <div id="head">
+        <img src="DTIL-removebg-preview.png" width="450px" alt="" srcset="">
+        <h1>Internal Defect Analyser</h1>
+    </div>
+
+    <div class="file-drop" >
+        <label style="display: inline;" for="csvFileInput">upload file (.csv):</label>
+        <input multiple style="display: inline;  margin-bottom: 10px;" type="file" id="csvFileInput" accept=".csv">
+   
+    </div>
+
+    <!-- file drop 2 -->
+
+
+    
+    
+    <!-- search -->
+    
+    <!-- <div>
+        <label for="searchInput">Serial Number:</label>
+        <input type="text" id="searchInput" placeholder="Enter Serial Number">
+        <button id="searchButton">Search</button>
+    </div> -->
+    
+    <div id="settings">
+
+       
+        <!-- date filter-->
+
+        <div>
+            <p style="display: inline;"> from:</p>
+            <input style="display: inline;" type="date" id="dateStart" placeholder="Start Date">
+            <p style="display: inline;"> to:</p>
+            <input type="date" id="dateEnd" placeholder="End Date">
+            
+        </div>
+        
+        <!-- drop down list -->
+        
+        <div>
+            <label for="reworkType">Rework Type: </label>
+            <select name="reworkType" id="reworkTypeDynamicSelect">
+                <option value="">All</option>
+            </select>
+            <!-- <button id="submitRework">submit</button> -->
+        </div>
+        
+        <!-- dynamic product list -->
+
+        <div>
+            <label for="productDynamicSelect">Product: </label>
+            <select name="productDynamicSelect" id="productDynamicSelect">
+                <option value="" selected>All</option>
+                
+            </select>
+        </div>
+        <button id="submitDate">Submit</button>
+        
+    </div>
+
+    <!-- display tables -->
+    
+    <div id="output"></div>
+    
+    <div id="output2"></div>
+
+    <div id="output3"></div>
+
+    <!-- show only top n  -->
+    
+    <div style="margin: 20px;">show only: <input type="number" id="showOnly" max="100" > <button id="updateShow">update</button></div>
+
+    <!-- first 3 graphs -->
+    <div id="content" style="background-color: #f0eceb;">
+
+        <p class="chartTitle" id="AOI" style="text-align: center; display: none; margin: 20px">Automated Optical Inspection (AOI)</p>
+
+        <div class="flex-container">
+            <canvas width="200px" height="100px" id="chart" ></canvas>
+            <canvas id="chart2"></canvas>
+            <canvas id="chart3"></canvas>
+        </div>
+
+        <!-- next 3 graphs -->
+
+        <p class="chartTitle" id="Visual" style="text-align: center; display: none; margin: 20px">Visual Inspection (VI)</p>
+
+        <div class="flex-container">
+            <canvas id="chart4"></canvas>
+            <canvas id="chart5"></canvas>
+            <canvas id="chart6"></canvas>
+        </div>
+
+    </div>
+
+    <!-- <div class="flex-container">
+        <canvas id="chart7"></canvas>
+        <canvas id="chart8"></canvas>
+        <canvas id="chart9"></canvas>
+
+    </div> -->
+    <div>
+        <button id="export">export as jpeg</button>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+
+</html>
